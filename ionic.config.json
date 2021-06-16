@@ -1,0 +1,7 @@
+{
+  "name": "iservice-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
