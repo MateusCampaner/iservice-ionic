@@ -1,12 +1,15 @@
+<!--Cabeçalho-->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Procurar Serviços
     </ion-title>
+    <ion-searchbar value="" color="danger"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-
+<!--Conteudo-->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -14,6 +17,26 @@
       <ion-title size="large">Procurar</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 pages"></app-explore-container>
 </ion-content>
+
+<!--Resultados da pesquisa-->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title><ion-icon name="people-outline"></ion-icon> Pintor</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Nome : Ionic <br>
+    Telefone : 00000-0000
+
+    <br><br>
+
+    Imagens do serviço
+
+    <br>
+
+    <img src="" />
+    <img src="" />
+  </ion-card-content>
+</ion-card>
