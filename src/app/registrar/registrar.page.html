@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>O que quer fazer com os serviços?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-radio-group>
+ 
+        <ion-item>
+          <ion-label>Quero CONTRATAR</ion-label>
+          <ion-radio value="CLIENT" slot="start"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Quero OFERECER</ion-label>
+          <ion-radio value="PARTNER" slot="start"></ion-radio>
+        </ion-item>
+    
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card><ion-card>
+    <ion-card-header>
+      <ion-card-title>Informações Pessoais</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type='text'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type='email'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type='password'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirme a senha</ion-label>
+        <ion-input type='password'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type='tel'></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-button size='full' color='light'>Registrar</ion-button>
+
+
+
+</ion-content>
