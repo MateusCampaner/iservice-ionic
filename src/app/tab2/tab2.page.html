@@ -1,17 +1,64 @@
-<ion-header [translucent]="true"></ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Oferecer Serviços
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  
+    <ion-card>
+      <ion-card-content>
+        <ion-card-header>
+          <ion-card-subtitle>Selecione a categoria do seu serviço</ion-card-subtitle>
+        </ion-card-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+        <ion-list>
+          <ion-radio-group value="biff" [(ngModel)]="marcacaoRadio">
+            <ion-item>
+              <ion-label> Encanador </ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label> Pedreiro </ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label> Eletricista </ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label> Pintor </ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+
+        </ion-radio-group>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-textarea placeholder="Faça uma descrição do seu serviço aqui" [(ngModel)]="inputTexto"></ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-subtitle>Adicione seu portifolio aqui</ion-card-subtitle>
+      </ion-card-header>
+      <ion-button>
+        <ion-icon name="attach-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="Limpar()">Publicar</ion-button>
 </ion-content>
