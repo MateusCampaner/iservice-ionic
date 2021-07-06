@@ -8,6 +8,10 @@ const routes: Routes = [
   },  {
     path: 'loading-page',
     loadChildren: () => import('./loading-page/loading-page.module').then( m => m.LoadingPagePageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
   }
 
 ];
