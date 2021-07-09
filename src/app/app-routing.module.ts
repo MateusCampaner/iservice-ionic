@@ -21,6 +21,24 @@ const routes: Routes = [
   {
     path: 'redefine',
     loadChildren: () => import('./redefine/redefine.module').then( m => m.RedefinePageModule)
+  },
+
+  //Acessa somente a tab1
+  {
+    path: 'tab1', loadChildren: ('./tab1/tab1.module#TabsPageModule')
+  },
+
+  //Botao funcionando
+  {
+    path: 'registrar', loadChildren: ('./registrar/registrar')
+  },
+
+  //Botoes q nao funcionam
+  {
+    path: 'redefine', loadChildren: ('./redefine/redefine.module#RedefineModule')
+  },
+  {
+    path: 'chat', loadChildren: ('./chat/chat.module#ChatModule')
   }
 
 
