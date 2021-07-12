@@ -35,10 +35,10 @@ const routes: Routes = [
 
   //Botoes q nao funcionam
   {
-    path: 'redefine', loadChildren: ('./redefine/redefine.module#RedefineModule')
+    path: 'redefine', loadChildren: ('./redefine/redefine.module#RedefinePage')
   },
   {
-    path: 'chat', loadChildren: ('./chat/chat.module#ChatModule')
+    path: 'chat', loadChildren: ('./chat/chat.module#ChatPageModule')
   }
 
 
