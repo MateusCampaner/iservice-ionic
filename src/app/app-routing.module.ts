@@ -7,6 +7,18 @@ const routes: Routes = [
     loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
   },
   {
+    path: 'tab2',
+    loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
+  },
+  {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then(m => m.ChatPageModule)
+  },
+  {
     path: '',
     loadChildren: () => import('./loading-page/loading-page.module').then( m => m.LoadingPagePageModule)
   },
@@ -35,13 +47,7 @@ const routes: Routes = [
 
   {
     path: 'redefine', loadChildren: ('./redefine/redefine')
-  },   
-
-  {
-    path: 'chat', loadChildren: ('./chat/chat')
   },
-
-
 ];
 @NgModule({
   imports: [
