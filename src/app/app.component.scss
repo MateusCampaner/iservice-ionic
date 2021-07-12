@@ -1,0 +1,15 @@
+.ion-color-brand {
+    --ion-color-base: var(--ion-color-brand);
+    --ion-color-base-rgb: var(--ion-color-brand-rgb);
+    --ion-color-contrast: var(--ion-color-brand-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-brand-contrast-rgb);
+    --ion-color-shade: var(--ion-color-brand-shade);
+    --ion-color-tint: var(--ion-color-brand-tint);
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
