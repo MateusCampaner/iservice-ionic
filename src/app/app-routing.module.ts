@@ -33,13 +33,13 @@ const routes: Routes = [
     path: 'registrar', loadChildren: ('./registrar/registrar')
   },
 
-  //Botoes q nao funcionam
   {
-    path: 'redefine', loadChildren: ('./redefine/redefine.module#RedefinePage')
+    path: 'redefine', loadChildren: ('./redefine/redefine')
+  },   
+
+  {
+    path: 'chat', loadChildren: ('./chat/chat')
   },
-  {
-    path: 'chat', loadChildren: ('./chat/chat.module#ChatPageModule')
-  }
 
 
 ];
