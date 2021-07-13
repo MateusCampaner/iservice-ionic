@@ -15,7 +15,7 @@ export class RedefinePage implements OnInit {
       cssClass: 'my-custom-class',
       header: 'Solicitação Enviada',
       message: 'Se dirija ao seu email de cadastro para confirmar a mudança da senha.',
-      buttons: ['OK']
+      buttons: ['Voltar', 'OK']
     });
 
     await alert.present();
