@@ -15,3 +15,18 @@
     padding-left: 1em;
     font-size : 1.2em;
 }
+
+.top {
+    height: calc(100% - 96px);
+    overflow: scroll;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    button{
+        margin:0px !important
+    }
+}
