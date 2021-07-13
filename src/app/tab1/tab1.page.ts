@@ -9,4 +9,10 @@ export class Tab1Page {
 
   constructor() {}
 
+  hide=false;
+
+  esconder(){
+    this.hide=!this.hide;
+  }
+
 }
