@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  hide=[false, false, false];
+
   constructor() {}
 
-  hide=false;
-
-  esconder(){
-    this.hide=!this.hide;
+  esconder(id){
+    this.hide[id]=!this.hide[id];
   }
 
 }

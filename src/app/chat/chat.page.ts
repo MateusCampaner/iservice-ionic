@@ -7,7 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatPage implements OnInit {
 
+  messages = [
+    {
+      user: 'jao',
+      createdAt: '',
+      msg: 'teste'
+    },
+    {
+      user: 'Usuário',
+      createdAt: '',
+      msg: 'teste'
+    }
+  ];
+
+  currentUser = 'Usuário';
+  novamsg = '';
+
   constructor() { }
+
+  /*sendMessage(){
+    this.messages.push({
+      user: 'Usuário',
+      createdAt: new Date().getTime(),
+      msg: this.novamsg
+    });
+
+    this.novamsg = '';
+  }*/
 
   ngOnInit() {
   }
