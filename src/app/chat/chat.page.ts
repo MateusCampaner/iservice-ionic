@@ -10,12 +10,12 @@ export class ChatPage implements OnInit {
   messages = [
     {
       user: 'jao',
-      createdAt: '',
+      createdAt: 155409156000,
       msg: 'teste'
     },
     {
       user: 'Usuário',
-      createdAt: '',
+      createdAt: 155409156000,
       msg: 'teste'
     }
   ];
@@ -23,19 +23,24 @@ export class ChatPage implements OnInit {
   currentUser = 'Usuário';
   novamsg = '';
 
+  //@ViewChild(IonContent) content: IonContent
+
   constructor() { }
 
-  /*sendMessage(){
+  sendMessage(){
     this.messages.push({
       user: 'Usuário',
       createdAt: new Date().getTime(),
       msg: this.novamsg
     });
+  }
 
-    this.novamsg = '';
+   /*this.novamsg = '';
+    setTimeout(() => {
+        this.content.scrollToBottom(200);
+    });
   }*/
 
   ngOnInit() {
   }
-
 }
