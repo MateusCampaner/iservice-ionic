@@ -23,18 +23,18 @@ export class Tab1Page {
     let val = ser.target.value;
     if(val && val.trim() !== ''){
       this.servicos = _.values(this.buscar);
+
       
-      /*
       this.servicos = this.servicos.filter((servico => {
         return (servico.nome.toLowerCase().indexOf(val.toLoweCase()) > -1);
-      })*/
+      })
 
 
-    }
+    ,
   }
   
 
-  hide=[false, false, false];
+  hide=[false, false, false,false];
 
   esconder(id){
     this.hide[id]=!this.hide[id];
