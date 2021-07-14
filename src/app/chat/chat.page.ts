@@ -9,19 +9,40 @@ export class ChatPage implements OnInit {
 
   messages = [
     {
-      user: 'jao',
-      createdAt: 155409156000,
-      msg: 'teste'
+      user: 'Cliente',
+      data: 1554090856000,
+      msg: 'Olá, gostaria de contratar o seu serviço'
+    },/*
+    {
+      user: 'Usuário',
+      data:  1554090856000,
+      msg: 'Olá, para quando voce gostaria'
+    },
+    {
+      user: 'Cliente',
+      data:  1554090856000,
+      msg: 'Para amanhã as 8 horas, seria possível?'
     },
     {
       user: 'Usuário',
-      createdAt: 155409156000,
-      msg: 'teste'
-    }
+      data:  1554090856000,
+      msg: 'Seria sim, qual o endereço'
+    },
+    {
+      user: 'Cliente',
+      data:  1554090856000,
+      msg: 'Rua Brasil 123'
+    },
+    {
+      user: 'Usuário',
+      data:  1554090856000,
+      msg: 'Ok, ate amanhã'
+    },*/
   ];
 
   currentUser = 'Usuário';
   novamsg = '';
+
 
   //@ViewChild(IonContent) content: IonContent
 
@@ -30,7 +51,7 @@ export class ChatPage implements OnInit {
   sendMessage(){
     this.messages.push({
       user: 'Usuário',
-      createdAt: new Date().getTime(),
+      data: new Date().getTime(),
       msg: this.novamsg
     });
   }

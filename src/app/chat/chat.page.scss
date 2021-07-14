@@ -23,13 +23,13 @@
     white-space: pre-wrap;
 }
 
-.other-message {
-    background: var(--ion-color-tertiary);
+.client-message {
+    background: #5d58e0;
     color: #fff;
 }
 
-.my-message {
-    background: var(--ion-color-secondary);
+.user-message {
+    background: #428cff;
     color: #fff;
 }
 
@@ -50,6 +50,7 @@
 
 .msg-btn {
     --padding-start: 0.5em;
-    --padding-end: 0.5em;  
+    --padding-end: 0.5em;
+    
 }
 
