@@ -16,3 +16,5 @@ export class Tab1Page {
   }
 
 }
+
+const servicosDisponiveis= ["Encanador", "Pedreiro", "Eletricista", "Pintor", "Mecanico", "Jardineiro"];
