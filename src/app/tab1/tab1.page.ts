@@ -23,7 +23,8 @@ export class Tab1Page {
 
   pesquisarServicos(ser: any){
     let val = ser.target.value;
-    if(val && val.trim() !== ''){
+
+    if(val && val.trim() != ''){
       this.servicos = _.values(this.buscar);
 
       this.servicos = this.servicos.filter((servico) => (servico.toLowerCase().indexOf(val.toLowerCase()) > -1));
