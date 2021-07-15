@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
+  /*{
     path: 'tab1',
     loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
   },
@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'tab3',
     loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule)
+  },*/
+  {
+    path: '',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: 'chat',
@@ -34,20 +38,20 @@ const routes: Routes = [
     path: 'redefine',
     loadChildren: () => import('./redefine/redefine.module').then( m => m.RedefinePageModule)
   },
-
-  //Acessa somente a tab1
-  {
-    path: 'tab1', loadChildren: ('./tab1/tab1.module#TabsPageModule')
-  },
-
-  //Botao funcionando
   {
     path: 'registrar', loadChildren: ('./registrar/registrar')
   },
-
   {
     path: 'redefine', loadChildren: ('./redefine/redefine')
   },
+
+  //Acessa somente a tab1
+  /*{
+    path: 'tab1', loadChildren: ('./tab1/tab1.module#TabsPageModule')
+  },*/
+
+  //Botao funcionando
+
 ];
 @NgModule({
   imports: [
