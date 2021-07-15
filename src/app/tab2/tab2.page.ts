@@ -35,4 +35,12 @@ export class Tab2Page {
 }
 export class Tab1page {
   servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
+
+  public addServicos(valor){
+    this.servicos.push(valor);
+  }
+
+  public getServicos(){
+    return this.servicos;
+  }
 }

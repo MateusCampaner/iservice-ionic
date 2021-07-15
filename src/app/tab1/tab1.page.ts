@@ -19,6 +19,8 @@ export class Tab1Page {
     this.buscar = this.servicos;
   }
 
+  
+
   pesquisarServicos(ser: any){
     let val = ser.target.value;
     if(val && val.trim() !== ''){
@@ -29,6 +31,13 @@ export class Tab1Page {
       this.servicos = this.buscar;
     }
   }
+
+/*
+  public addServicos(valor){
+    this.servicos.push(valor);
+  }
+*/
+
   hide=[false, false, false, false];
 
   esconder(id){
