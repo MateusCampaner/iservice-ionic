@@ -32,6 +32,7 @@ export class Tab2Page {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  
-  
+}
+export class Tab1page {
+  servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
 }

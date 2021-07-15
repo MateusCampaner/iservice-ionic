@@ -14,17 +14,17 @@ export class Tab1Page {
 
   constructor() {
     this.queryText= '';
-    this.servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro'];  
+    this.servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];  
     
     this.buscar = this.servicos;
   }
 
   pesquisarServicos(ser: any){
-    const val = ser.target.value;
+    let val = ser.target.value;
     if(val && val.trim() !== ''){
       this.servicos = _.values(this.buscar);
 
-      this.servicos = this.servicos.filter((servico) => (servico.toLowerCase().indexOf(val.toLoweCase()) > -1));
+      this.servicos = this.servicos.filter((servico) => (servico.toLowerCase().indexOf(val.toLowerCase()) > -1));
     } else {
       this.servicos = this.buscar;
     }
