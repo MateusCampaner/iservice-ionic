@@ -15,7 +15,7 @@ export class Tab1Page {
   constructor() {
     this.queryText= '';
     this.servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];  
-    
+
     this.buscar = this.servicos;
   }
 
