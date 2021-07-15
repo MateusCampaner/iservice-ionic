@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { AlertController } from '@ionic/angular';
-
+import { Tab1Page } from '../tab1/tab1.page';
 
 @Component({
   selector: 'app-tab2',
@@ -32,4 +32,6 @@ export class Tab2Page {
     console.log('onDidDismiss resolved with role', role);
   }
 
+  
+  
 }

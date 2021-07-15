@@ -8,38 +8,32 @@ import _ from 'lodash';
 })
 export class Tab1Page {
 
-  public servicos = [];
-  buscar:any;
+  servicos = [];
+  buscar: any;
   queryText: string;
 
   constructor() {
-    this.queryText='';
-    this.servicos = ["Encanador", "Pedreiro", "Eletricista", "Pintor", "Mecanico", "Jardineiro"];
+    this.queryText= '';
+    this.servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro'];  
     
     this.buscar = this.servicos;
   }
 
-  filterServico(ser: any){
-    let val = ser.target.value;
+  pesquisarServicos(ser: any){
+    const val = ser.target.value;
     if(val && val.trim() !== ''){
       this.servicos = _.values(this.buscar);
 
-      
-      this.servicos = this.servicos.filter((servico => {
-        return (servico.nome.toLowerCase().indexOf(val.toLoweCase()) > -1);
-      })
-
-
-    ,
+      this.servicos = this.servicos.filter((servico) => (servico.toLowerCase().indexOf(val.toLoweCase()) > -1));
+    } else {
+      this.servicos = this.buscar;
+    }
   }
-  
-
-  hide=[false, false, false,false];
+  hide=[false, false, false, false];
 
   esconder(id){
     this.hide[id]=!this.hide[id];
   }
-
 }
 
 
