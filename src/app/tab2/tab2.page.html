@@ -1,8 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button title="" color='light'></ion-back-button>
-    </ion-buttons>
     <ion-title>
       Oferecer Serviços
     </ion-title>
@@ -18,39 +15,10 @@
 
         <ion-list>
           <ion-radio-group value="biff" [(ngModel)]="marcacaoRadio">
-            <ion-item *ngFor="let servico of servicos.getServicos()">
-              <ion-label>{{servico}}</ion-label>
-              <ion-radio slot="start"></ion-radio>
-            </ion-item>
 
-            <ion-item>
-              <ion-label> Pedreiro </ion-label>
-              <ion-radio slot="start"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-              <ion-label> Eletricista </ion-label>
-              <ion-radio slot="start"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-              <ion-label> Pintor </ion-label>
-              <ion-radio slot="start"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-              <ion-label> Mecanico </ion-label>
-              <ion-radio slot="start"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-              <ion-label> Jardineiro </ion-label>
-              <ion-radio slot="start"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-              <ion-label> Manicure </ion-label>
-              <ion-radio slot="start"></ion-radio>
+            <ion-item *ngFor="let item of servicos; let indice=index"> 
+              <ion-label> {{item}} </ion-label>
+                <ion-radio value={{item}} slot="start"></ion-radio>
             </ion-item>
 
         </ion-radio-group>
@@ -78,5 +46,5 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="Limpar()" (click)="addServicos()">Publicar</ion-button>
+  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="limpar()" (click)="addServicos()">Publicar</ion-button>
 </ion-content>
