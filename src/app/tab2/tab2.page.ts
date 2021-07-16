@@ -2,6 +2,8 @@ import { Component} from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { DadosService } from '../funcoes/dados.service';
 
+import { Tab1Page } from '../tab1/tab1.page';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -39,13 +41,22 @@ export class Tab2Page {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  //DadosService usar
 
+  // Tab1 usar
+
+  tab1page:Tab1Page;
+
+  addServicoArray(){
+    this.tab1page.add(this.inputTexto);
+  }
+
+  //DadosService usar
+/*
   dadosService:DadosService;
 
   criarServico(){
     this.dadosService.add(this.dadosService.getServicos());
-  }
+  }*/
 
 
 /*

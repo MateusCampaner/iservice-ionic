@@ -7,9 +7,9 @@ export class DadosService {
 
   constructor() {};
 
-  private servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
+  //private servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
 
-  public getServicos(){
+  /*public getServicos(){
     return this.servicos;
   }
 
@@ -19,6 +19,6 @@ export class DadosService {
 
   public removeServico(valor){
     this.servicos.splice(valor,1);
-  }
+  }*/
    
 }

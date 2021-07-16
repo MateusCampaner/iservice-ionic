@@ -8,13 +8,25 @@ import _ from 'lodash';
 })
 export class Tab1Page {
 
-  servicos = [];
+  private servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
   buscar: any;
   queryText: string;
 
+  public getServicos(){
+    return this.servicos;
+  }
+
+  public add(inputTexto){
+    this.servicos.push(inputTexto);
+  }
+
+  public removeServico(valor){
+    this.servicos.splice(valor,1);
+  }
+
   constructor() {
     this.queryText= '';
-    this.servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];  
+    //this.servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];  
 
     this.buscar = this.servicos;
   }
