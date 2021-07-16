@@ -59,9 +59,6 @@ export class Tab1Page {
   }
 
   tab2page:Tab2Page;
-
-  
-
   
 }
 

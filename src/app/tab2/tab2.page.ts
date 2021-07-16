@@ -58,7 +58,6 @@ export class Tab2Page {
   getLista(){
     return this.minhaLista;
   }
-  
 
 
   // Tab1 usar
