@@ -11,8 +11,6 @@ export class Tab1Page {
 
   tab2page:Tab2Page;
 
-  
-
   servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
   buscar: any;
   queryText: string;
@@ -50,19 +48,12 @@ export class Tab1Page {
     }
   }
 
-/*
-  public addServicos(valor){
-    this.servicos.push(valor);
-  }
-*/
 
   hide=[false, false, false, false];
 
   esconder(id){
     this.hide[id]=!this.hide[id];
   }
-
-  
 
 }
 
