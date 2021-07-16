@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { DadosService } from '../funcoes/dados.service';
 
@@ -41,13 +41,28 @@ export class Tab2Page {
     console.log('onDidDismiss resolved with role', role);
   }
 
+  //teste dados service
+  @ViewChild('input') meuInput;
+  minhaLista = ["Batata", "Cebola", "Tomate"];
+  
+
+  adiciona() {
+    this.minhaLista.push(this.inputTexto);
+    this.inputTexto="";
+    this.meuInput.setFocus();
+  }
+
+  remover(indice) {
+    this.minhaLista.splice(indice,1);
+  }
+
 
   // Tab1 usar
 
   tab1page:Tab1Page;
 
   addServicoArray(){
-    this.tab1page.add(this.inputTexto);
+    this.tab1page.getServicos();
   }
 
   //DadosService usar

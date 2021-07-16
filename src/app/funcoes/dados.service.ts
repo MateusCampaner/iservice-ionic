@@ -20,5 +20,7 @@ export class DadosService {
   public removeServico(valor){
     this.servicos.splice(valor,1);
   }*/
+
+  
    
 }

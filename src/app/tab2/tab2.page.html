@@ -14,6 +14,34 @@
   </ion-grid>
 </ion-header>
 
+<!--teste-->
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="10">
+      <ion-input  #input 
+                  [(ngModel)]="inputTexto" 
+                  (keyup.enter)="adiciona()">
+      </ion-input>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="adiciona()" >
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-list>
+  <ion-item *ngFor="let item of minhaLista; let indice=index">
+    <ion-label>{{indice}} {{item}}</ion-label>
+    <ion-fab-button size="small" 
+                    color="danger"
+                    (click)="remover(indice)">
+      <ion-icon name="remove-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-item>
+</ion-list>  
+
 <ion-content [fullscreen]="true">
     <ion-card>
       <ion-card-content>
@@ -55,5 +83,5 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="limpar()" (click)="addServicoArray()">Publicar</ion-button>
+  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="limpar()" (click)="adiciona()">Publicar</ion-button>
 </ion-content>
