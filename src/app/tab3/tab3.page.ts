@@ -7,12 +7,14 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
+
   constructor() {}
 
-  hide=false;
+  hide=[false, false, false, false];
 
-  esconder(){
-    this.hide=!this.hide;
+  esconder(id){
+    this.hide[id]=!this.hide[id];
   }
 
 }
