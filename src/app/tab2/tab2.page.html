@@ -10,19 +10,20 @@
     <ion-card>
       <ion-card-content>
         <ion-card-header>
-          <ion-card-subtitle>Selecione a categoria do seu serviço</ion-card-subtitle>
+          <ion-card-title>Informe o tipo de serviço a ser oferecido</ion-card-title>
+          <ion-input [(ngModel)]="inputTexto"></ion-input>
         </ion-card-header>
 
-        <ion-list>
+        <!--<ion-list>
           <ion-radio-group value="biff" [(ngModel)]="marcacaoRadio">
 
-            <ion-item *ngFor="let item of servicos; let indice=index"> 
-              <ion-label> {{item}} </ion-label>
-                <ion-radio value={{item}} slot="start"></ion-radio>
+           <<ion-item *ngFor="let valor of dadosService; let indice=index"> 
+              <ion-label> {{valor}} </ion-label>
+                <ion-radio value={{valor}} slot="start"></ion-radio>
             </ion-item>
 
         </ion-radio-group>
-      </ion-list>
+      </ion-list>-->
 
     </ion-card-content>
   </ion-card>
@@ -30,7 +31,7 @@
   <ion-card>
     <ion-card-content>
       <ion-item>
-        <ion-textarea placeholder="Faça uma descrição do seu serviço aqui" [(ngModel)]="inputTexto"></ion-textarea>
+        <ion-textarea placeholder="Faça uma descrição do seu serviço aqui" [(ngModel)]="inputDesc"></ion-textarea>
       </ion-item>
     </ion-card-content>
   </ion-card>
@@ -46,5 +47,5 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="limpar()" (click)="addServicos()">Publicar</ion-button>
+  <ion-button size="large" expand="block" (click)="presentAlert()" (click)="limpar()" (click)="add()">Publicar</ion-button>
 </ion-content>

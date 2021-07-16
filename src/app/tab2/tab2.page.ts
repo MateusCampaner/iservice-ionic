@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { Tab1Page } from '../tab1/tab1.page';
+import { DadosService } from '../funcoes/dados.service';
 
 @Component({
   selector: 'app-tab2',
@@ -9,15 +9,19 @@ import { Tab1Page } from '../tab1/tab1.page';
 })
 export class Tab2Page {
   inputTexto = "";
+  inputDesc = "";
   marcacaoRadio = "";
 
   //lista = ["Pintor", "Pedreiro", "Encanador", "Eletricista"];
-  servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
+  //servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
 
   limpar(){
     this.inputTexto = "";
+    this.inputDesc = "";
     this.marcacaoRadio = ""; 
   }
+
+  //Alerta 
 
   constructor(public alertController: AlertController) {}
 
@@ -35,21 +39,30 @@ export class Tab2Page {
     console.log('onDidDismiss resolved with role', role);
   }
 
+  //DadosService usar
+
+  dadosService:DadosService;
+
+  criarServico(){
+    this.dadosService.add(this.dadosService.getServicos());
+  }
+
+
+/*
+  public getServicos(){
+    return this.servicos;
+  }
+
   public addServicos(valor){
     this.servicos.push(valor);
   }
 
-  
-}
-
-export class Tab1page {
-  servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
-
- 
-  public getServicos(){
-    return this.servicos;
+  public removeServico(valor){
+    this.servicos.splice(valor,1);
   }
+  */
 }
+
 
 /*
 import { Component} from '@angular/core';

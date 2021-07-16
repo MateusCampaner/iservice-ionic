@@ -5,10 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class DadosService {
 
-  constructor(nome, senha, servico, ) {
-    this.nome = nome;
-    this.senha = senha;
-    this.servico = servico;
-   };
+  constructor() {};
+
+  private servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
+
+  public getServicos(){
+    return this.servicos;
+  }
+
+  public add(valor){
+    this.servicos.push(valor);
+  }
+
+  public removeServico(valor){
+    this.servicos.splice(valor,1);
+  }
    
 }
