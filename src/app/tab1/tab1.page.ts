@@ -11,6 +11,8 @@ export class Tab1Page {
 
   tab2page:Tab2Page;
 
+  
+
   servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
   buscar: any;
   queryText: string;
