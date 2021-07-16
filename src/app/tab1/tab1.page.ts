@@ -9,7 +9,9 @@ import { Tab2Page } from '../tab2/tab2.page';
 })
 export class Tab1Page {
 
-  private servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
+  tab2page:Tab2Page;
+
+  servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
   buscar: any;
   queryText: string;
 
@@ -58,8 +60,8 @@ export class Tab1Page {
     this.hide[id]=!this.hide[id];
   }
 
-  tab2page:Tab2Page;
   
+
 }
 
 
