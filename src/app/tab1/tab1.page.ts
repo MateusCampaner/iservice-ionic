@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import _ from 'lodash';
+import { Tab2Page } from '../tab2/tab2.page';
 
 @Component({
   selector: 'app-tab1',
@@ -56,6 +57,16 @@ export class Tab1Page {
   esconder(id){
     this.hide[id]=!this.hide[id];
   }
+
+  tab2page:Tab2Page;
+
+  
+
+  
 }
 
 
+
+
+
+ 

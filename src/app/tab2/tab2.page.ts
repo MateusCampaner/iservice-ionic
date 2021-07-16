@@ -55,9 +55,14 @@ export class Tab2Page {
     this.minhaLista.splice(indice,1);
   }
 
+  getLista(){
+    return this.minhaLista;
+  }
+  
+
 
   // Tab1 usar
-
+  /*/
   tab1page:Tab1Page;
 
   addServicoArray(){
