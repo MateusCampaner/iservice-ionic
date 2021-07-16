@@ -7,23 +7,23 @@
       <ion-card-content>
         <ion-item>
           <ion-label position="floating">Email</ion-label>
-          <ion-input type='email'></ion-input>
+          <ion-input required='true' type='email' [(ngModel)]="email"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Senha</ion-label>
-          <ion-input type='password'></ion-input>
+          <ion-input required='true' type='password' [(ngModel)]="senha"></ion-input>
         </ion-item>
        
-        <ion-button [routerLink] = "['/tabs']" color='primary' size='full'>Entrar</ion-button>
-        <ion-button [routerLink] = "['/registrar']" routerdirection="foward" color='primary' fill='clear' size='full'>Cadastrar</ion-button>
-        <ion-button [routerLink] = "['/redefine']" routerdirection="foward" color="primary" fill='clear' size='full'>Esqueci a senha </ion-button>
+        <ion-button color='primary' size='full' (click)="logar()">Entrar</ion-button>
+        {{logado}}
+        <ion-button (click)="registrar()" color='primary' fill='clear' size='full'>Cadastrar</ion-button>
+        <ion-button (click)="redefinir()" color="primary" fill='clear' size='full'>Esqueci a senha </ion-button>
         
         <!--O botoes de teste-->
-        <!--<ion-button [routerLink] = "['/tab2']" routerdirection="foward" color="primary" fill='clear' size='full'>tab2</ion-button>
+        <ion-button [routerLink] = "['/tab2']" routerdirection="foward" color="primary" fill='clear' size='full'>tab2</ion-button>
         <ion-button [routerLink] = "['/tab3']" routerdirection="foward" color='primary' fill='clear' size='full'>tab3</ion-button>
         <ion-button [routerLink] = "['/chat']" routerdirection="foward" color='primary' fill='clear' size='full'>Chat</ion-button>
-        -->
-        
+
       </ion-card-content>
     </ion-card>
   </div>
