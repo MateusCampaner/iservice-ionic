@@ -9,6 +9,10 @@ export class Tab3Page {
 
   servicos = ['Encanador','Pedreiro','Eletricista','Pintor','Mecanico','Jardineiro', 'Manicure'];
 
+  public removeServico(valor){
+    this.servicos.splice(valor,1);
+  }
+
   constructor() {}
 
   hide=[false, false, false, false];

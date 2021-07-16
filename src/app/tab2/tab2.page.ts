@@ -43,12 +43,12 @@ export class Tab2Page {
 
   //teste dados service
   @ViewChild('input') meuInput;
-  minhaLista = ["Batata", "Cebola", "Tomate"];
+   minhaLista = ["Batata", "Cebola", "Tomate"];
 
   adiciona() {
     this.minhaLista.push(this.meuInput);
     this.meuInput="";
-    this.meuInput.setFocus();
+    //this.meuInput.setFocus();
   }
 
   remover(indice) {
@@ -59,6 +59,7 @@ export class Tab2Page {
     return this.minhaLista;
   }
 
+  
 
   // Tab1 usar
   /*/
