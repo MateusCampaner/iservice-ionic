@@ -44,11 +44,10 @@ export class Tab2Page {
   //teste dados service
   @ViewChild('input') meuInput;
   minhaLista = ["Batata", "Cebola", "Tomate"];
-  
 
   adiciona() {
-    this.minhaLista.push(this.inputTexto);
-    this.inputTexto="";
+    this.minhaLista.push(this.meuInput);
+    this.meuInput="";
     this.meuInput.setFocus();
   }
 
